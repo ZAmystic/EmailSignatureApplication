@@ -53,7 +53,7 @@ project/
 ---
 
 ## 🖼️ Example Workflow
-<img src="assets/signature.png" alt="Signature Generator Demo" width="600">
+![Signature Generator Demo](https://github.com/yourusername/Waterford-Carriers_HTML5/blob/main/assets/signature.png?raw=true)
 - Enter your details → Click **Update Signature**  
 - Preview updates instantly.  
 - Signature URL appears in the text field.  
