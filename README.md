@@ -53,7 +53,7 @@ project/
 ---
 
 ## 🖼️ Example Workflow
-![Signature Generator Demo](assets/Example.png)
+![Signature Generator Demo](Example.png)
 - Enter your details → Click **Update Signature**  
 - Preview updates instantly.  
 - Signature URL appears in the text field.  
