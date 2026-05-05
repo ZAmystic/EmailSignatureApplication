@@ -1,11 +1,11 @@
-*{
+* {
   font-family: Arial, sans-serif;
 }
-
 
 .signature-container {
   position: relative;
   display: inline-block;
+  height: 200px;
 }
 
 .signature-template {
@@ -16,18 +16,26 @@
 .signature-text {
   position: absolute;
   left: 20px;
+  right: 20px;   /* allow dynamic adjustment */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Signature-watermark {
+  margin-left: 165px;
 }
 
 /* Individual styles */
 .signature-name {
   top: 25px;
   color: #2c3e50;
-  font: bold 22px Arial;
+  font: bold 28px Arial;
 }
 
 .signature-position {
-  top: 50px;
-  font-size: 25px;
+  top: 55px;
+  font-size: 20px;
   color: #e08700;
 }
 
@@ -49,20 +57,12 @@
   font: bold 18px Arial;
 }
 
-#downloadBtn{
+#downloadBtn, #copyUrlBtn, #submitbtn {
   margin-top: 10px;
-  padding: 5px 10px;
-}
-#copyUrlBtn{
-  padding: 5px 10px;
-}
-#submitbtn{
-  margin-top: 10px;
-  margin-bottom: 10px;
   padding: 5px 10px;
 }
 
-#signatureUrl{
+#signatureUrl {
   width: 400px;
   padding: 2px;
   margin-top: 10px;
