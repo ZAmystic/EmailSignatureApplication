@@ -1,3 +1,5 @@
+const signatureContainer = document.getElementById("signaturePreview");
+
 // Handle form submission
 document.getElementById("signatureForm").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -10,24 +12,21 @@ document.getElementById("signatureForm").addEventListener("submit", function (e)
   document.getElementById("sigWebsite").textContent = "www.waterfordcarriers.co.za";
 
   // Generate signature URL with html2canvas
-  const signatureContainer = document.querySelector(".signature-container");
-  html2canvas(signatureContainer).then(canvas => {
+  html2canvas(signatureContainer, { scale: 2, useCORS: true }).then(canvas => {
     const dataUrl = canvas.toDataURL("image/png");
-
-    // Put URL into the input field
     document.getElementById("signatureUrl").value = dataUrl;
   });
 });
 
 // Download PNG
 document.getElementById("downloadBtn").addEventListener("click", function () {
-  const signatureContainer = document.querySelector(".signature-container");
-
-  html2canvas(signatureContainer).then(canvas => {
+  html2canvas(signatureContainer, { scale: 2, useCORS: true }).then(canvas => {
     const link = document.createElement("a");
     link.download = "signature.png";
     link.href = canvas.toDataURL("image/png");
+    document.body.appendChild(link); // ensure it’s in DOM
     link.click();
+    document.body.removeChild(link); // cleanup
   });
 });
 
